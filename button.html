@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/182e9b0fdf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="button.css">
+    
+  </head>
+
+  <body style="margin-left:15px; margin-right:15px;">
+  
+   
+    <div class="row">
+      <div class="col-12 mousepad">
+        <div class="float-top">
+          <div class="search float-left ml-4 mt-4"><i class="fas fa-search fa-3x" onclick="aclick()"></i></div>
+          <div class="camera float-right mr-4 mt-4"><i class="fa fa-camera fa-3x" onclick="remoteScreenshot()"></i></div>
+        <div class="google" style="display:none">
+          <form method=get action="http://www.google.co.kr/search" target="_blank" >
+            <table bgcolor="skyblue">
+              <tr>
+                <td>
+              <input type=text name=q size=25 maxlength=255 value="" /> <!-- 구글 검색 입력 창 -->
+                <input type=submit name=btnG value="Google 검색" /> <!-- 검색 버튼 -->
+               </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        </div>
+        <div class="scroll">
+          <div class="arrow-up"><i class="fas fa-arrow-up fa-3x"></i></div>
+          <div class="arrow-down"><i class="fas fa-arrow-down fa-3x"></i></div>
+        </div>
+        <div class="row click" style="border-right:none; border-left:none;">
+          <div class="cl col mt-3" style="font-size:50px; font-weight:bold; text-align:center;" onclick="remoteClick()">L</div>
+          <div class="vertical-divider"></div>
+          <div class="cr col mt-3" style="font-size:50px; font-weight:bold; text-align:center;">R</div>
+        </div>
+          <div class="keyboard mt-2" style="text-align:center" onclick="input()"><i class="fas fa-keyboard fa-3x"></i></div>
+          <div class="inputkey mb-4" style="text-align:center; display:none"><input type="number" max="9999" maxlength="4" oninput="maxLengthCheck(this)"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="./mousepad.js"></script>
+    <script src="./remote.js"></script> 
+    <script>
+
+      $(".mousepad").on("touchmove", function(e){
+      e.preventDefault()
+      });
+
+     
+      
+              function aclick() {
+    
+                if($('.google').css("display") == "none"){
+                    $('.google').css("display", "block");
+                } else {
+                    $('.google').css("display", "none");
+                      }
+              };
+
+              function input() {
+                if($('.inputkey').css("display") == "none"){
+                    $('.inputkey').css("display", "block");
+                } else {
+                    $('.inputkey').css("display", "none");
+                      }
+              };
+              function maxLengthCheck(object){
+                if (object.value.length > object.maxLength){
+                  object.value = object.value.slice(0, object.maxLength);
+                }
+                };
+        </script>
+
+  </body>
+</html>
