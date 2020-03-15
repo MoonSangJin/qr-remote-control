@@ -70,6 +70,12 @@ function remoteScreenshot()
 
 }
 
+function remoteScrollVertical( amount )
+{
+    webSocket.send("sv " + amount );
+}
+
+
 
 
 /*
@@ -84,6 +90,7 @@ t : typing
 
 ss : screenshot
 
+sv : scrollvertical
 */
 
 
