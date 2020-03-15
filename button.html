@@ -15,14 +15,14 @@
 
     <div class="row first-row"> 
       <div class="col-12 function">
-            <div class="search float-left mt-2"><i class="fas fa-search fa-3x" onclick="aclick()"></i></div>
-            <div class="camera float-right mt-2"><i class="fa fa-camera fa-3x" onclick="remoteScreenshot()"></i></div>
-            <div class="google" style="display:none">
+            <div class="search float-left mt-3"><i class="fas fa-search fa-3x" onclick="aclick()"></i></div>
+            <div class="camera float-right mt-3"><i class="fa fa-camera fa-3x" onclick="remoteScreenshot()"></i></div>
+            <div class="google" style="display:block;">
               <form method=get action="http://www.google.co.kr/search" target="_blank" >
-                <table bgcolor="skyblue">
+                <table bgcolor="powderblue">
                   <tr>
                     <td>
-                  <input type=text name=q size=25 maxlength=255 value="" /> <!-- 구글 검색 입력 창 -->
+                  <input type=text name=q size=20 maxlength=255 value="" /> <!-- 구글 검색 입력 창 -->
                     <input type=submit name=btnG value="Google 검색" /> <!-- 검색 버튼 -->
                   </td>
                   </tr>
@@ -62,19 +62,17 @@
     <script src="./remote.js"></script> 
     <script>
 
-      $(".second-row").on("touchmove", function(e){
+      $(".mousepad").on("touchmove", function(e){
       e.preventDefault()
       });
-
      
       
               function aclick() {
-    
                 if($('.google').css("display") == "none"){
                     $('.google').css("display", "block");
                 } else {
                     $('.google').css("display", "none");
-                      }
+                }
               };
 
               function input() {
