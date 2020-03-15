@@ -1,38 +1,66 @@
-.mousepad {
-  height: 100;
-  border: 10px solid black;
-  border-radius: 10px;
-  background-color:skyblue;
-}
-
-.scroll {
-  height: 70vh;
-}
-
-.click {
-  height: 20vh;
-  border: 10px solid black;
-}
-
-.vertical-divider {
-  height: 100%;
-  width: 10px;
-  background-color: black;
-}
-.keyboard{
+.first-row{
   height: 10vh;
 }
+.second-row{
+  height: 60vh; 
+}
+.third-row{
+  height: 20vh;
+}
+.fourth-row{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 7px solid black;
+  border-top: none;
+  background-color: lightgoldenrodyellow;
+}
 
-.arrow-up{
-  position: absolute;
-  top: 170px;
-  right: 40px;
+.function{
+  border: 7px solid black;
+  border-bottom: none;
+  background-color: powderblue;
 }
-.arrow-down{
-  position: absolute;
-  top: 310px;
-  right: 40px;
+
+.mousepad{
+  border: 7px solid black;
+  padding-right: 0;
+  padding-left: 0;
+  background-color: lightgray;
 }
-.click{
-  background-color:#FA8072;
+
+.scroll{
+  border: 7px solid black;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  background-color: powderblue;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.cl{
+  border: 7px solid black;
+  border-top: none;
+  border-right: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:50px; font-weight:bold; text-align:center;
+  background-color: lightpink;
+}  
+.cr{
+  border: 7px solid black;
+  border-top: none;
+  border-left: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size:50px; font-weight:bold; text-align:center;
+  background-color: lightpink;
+}
+.vertical-divider{
+  width: 7px;
+  background-color: black;
 }
