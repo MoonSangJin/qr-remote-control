@@ -1,4 +1,7 @@
 # qr-remotecontrol
+
+![](movie.gif)
+
 1.Your smartphone and computer must be connected to the same Wi-Fi.
 
 2.Use live server in Visual Studio Code
